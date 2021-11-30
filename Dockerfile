@@ -11,6 +11,6 @@ rm -f /lib/systemd/system/basic.target.wants/*;\
 rm -f /lib/systemd/system/anaconda.target.wants/*; \
 echo 'root' | passwd --stdin root; \
 yum -y install sudo; \
-adduser -G sudo --password sac19FwGGTx/A svd;
+adduser -G wheel --password sac19FwGGTx/A svd;
 VOLUME [ "/sys/fs/cgroup" ]
 CMD ["/usr/sbin/init"]
