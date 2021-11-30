@@ -8,7 +8,9 @@ rm -f /lib/systemd/system/local-fs.target.wants/*; \
 rm -f /lib/systemd/system/sockets.target.wants/*udev*; \
 rm -f /lib/systemd/system/sockets.target.wants/*initctl*; \
 rm -f /lib/systemd/system/basic.target.wants/*;\
-rm -f /lib/systemd/system/anaconda.target.wants/*;\
-echo 'Docker!' | passwd --stdin root
+rm -f /lib/systemd/system/anaconda.target.wants/*; \
+echo 'root' | passwd --stdin root; \
+yum -y install sudo; \
+adduser -aG sudo --password sac19FwGGTx/A svd;
 VOLUME [ "/sys/fs/cgroup" ]
 CMD ["/usr/sbin/init"]
