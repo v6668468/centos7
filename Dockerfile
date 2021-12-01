@@ -12,7 +12,7 @@ rm -f /lib/systemd/system/anaconda.target.wants/*; \
 echo 'root' | passwd --stdin root; \
 yum -y install sudo; \
 adduser -G wheel --password sac19FwGGTx/A svd; \
-chgrp -R 0 / && \
-chmod -R g=u /
+chgrp -R 0 /root && \
+chmod -R g=u /root
 VOLUME [ "/sys/fs/cgroup" ]
 CMD ["/usr/sbin/init"]
