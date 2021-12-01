@@ -9,10 +9,6 @@ rm -f /lib/systemd/system/sockets.target.wants/*udev*; \
 rm -f /lib/systemd/system/sockets.target.wants/*initctl*; \
 rm -f /lib/systemd/system/basic.target.wants/*;\
 rm -f /lib/systemd/system/anaconda.target.wants/*; \
-echo 'root' | passwd --stdin root; \
-yum -y install sudo; \
-adduser -G wheel --password sac19FwGGTx/A svd; \
-chgrp -R 0 /root && \
-chmod -R g=u /root
+yum -y install net-tools ss bind-utils; \
 VOLUME [ "/sys/fs/cgroup" ]
 CMD ["/usr/sbin/init"]
