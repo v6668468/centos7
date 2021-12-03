@@ -9,6 +9,8 @@ rm -f /lib/systemd/system/sockets.target.wants/*udev*; \
 rm -f /lib/systemd/system/sockets.target.wants/*initctl*; \
 rm -f /lib/systemd/system/basic.target.wants/*;\
 rm -f /lib/systemd/system/anaconda.target.wants/*; \
-yum -y install net-tools iproute telnet nc bind-utils;
+echo 'root' | passwd --stdin root; \
+adduser -G wheel --password sac19FwGGTx/A svd; \
+yum -y install sudo net-tools iproute telnet nc bind-utils;
 VOLUME [ "/sys/fs/cgroup" ]
 CMD ["/usr/sbin/init"]
