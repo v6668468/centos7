@@ -10,8 +10,8 @@ rm -f /lib/systemd/system/sockets.target.wants/*initctl*; \
 rm -f /lib/systemd/system/basic.target.wants/*;\
 rm -f /lib/systemd/system/anaconda.target.wants/*; \
 echo 'root' | passwd --stdin root; \
-# pass: x11docker
 adduser -G wheel --password sac19FwGGTx/A svd; \
 yum -y install sudo net-tools iproute telnet nc bind-utils;
 VOLUME [ "/sys/fs/cgroup" ]
 CMD ["/usr/sbin/init"]
+# svd pass: x11docker
