@@ -11,7 +11,7 @@ rm -f /lib/systemd/system/basic.target.wants/*;\
 rm -f /lib/systemd/system/anaconda.target.wants/*; \
 echo 'root' | passwd --stdin root; \
 adduser -G wheel --password sac19FwGGTx/A svd; \
-yum -y install sudo net-tools iproute telnet nc ssh bind-utils;
+yum -y install sudo net-tools iproute telnet nc openssh-server bind-utils;
 VOLUME [ "/sys/fs/cgroup" ]
 CMD ["/usr/sbin/init"]
 # svd pass: x11docker
